@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reoo XYZ – Luxury Digital Marketing Agency</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0B0C10;
+            color: #f1f1f1;
+            scroll-behavior: smooth;
+        }
+
+        section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        h2.section-title {
+            color: #D4AF37;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* Hero Section - First Page */
+        .hero {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1400&q=80') center center / cover no-repeat;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            padding: 40px 20px;
+        }
+
+        .hero h1 {
+            font-size: 4.5rem; /* Larger for impact */
+            color: #D4AF37;
+            background-color: rgba(0,0,0,0.7); /* Darker for better contrast */
+            padding: 15px 30px; /* More generous padding */
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4); /* Subtle shadow for depth */
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.6); /* Text shadow for clarity */
+            margin-bottom: 20px; /* Space between H1 and H2 */
+        }
+
+        .hero h2 {
+            font-size: 2.2rem; /* Larger than a paragraph, clearly visible */
+            background-color: rgba(0,0,0,0.6); /* Darker for better contrast */
+            padding: 12px 20px;
+            border-radius: 8px;
+            max-width: 800px; /* Wider for the subtitle */
+            margin-top: 15px;
+            line-height: 1.4;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+            font-weight: 600; /* Slightly bolder */
+        }
+
+        .hero p {
+            background-color: rgba(0,0,0,0.6); /* Darker for better contrast */
+            padding: 12px 20px;
+            border-radius: 8px;
+            max-width: 700px;
+            margin-top: 15px;
+            line-height: 1.6;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        /* About Section */
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about-img, .about-text {
+            flex: 1;
+        }
+
+        .about-img img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+        }
+
+        /* Services Section */
+        .services-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .card {
+            background-color: #1F2833;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+            width: 280px; /* Slightly wider cards */
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: translateY(-8px); /* More pronounced lift */
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        }
+
+        .card h3 {
+            color: #D4AF37;
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* Why Work With Us Section */
+        .why li {
+            margin: 10px 0;
+            padding-left: 30px;
+            list-style: none;
+            position: relative;
+            font-size: 1.1rem;
+        }
+
+        .why li::before {
+            content: '✔';
+            position: absolute;
+            left: 0;
+            color: #D4AF37;
+            font-size: 1.3rem;
+        }
+
+        /* Testimonials Section - Enhanced for realism */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+            gap: 30px;
+            justify-content: center;
+            padding-top: 30px;
+        }
+
+        .testimonial-card {
+            background-color: #1F2833;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+            border-left: 5px solid #D4AF37; /* More prominent border */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        }
+
+        .testimonial-card blockquote {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            font-style: italic;
+            color: #e0e0e0;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            margin-top: auto; /* Pushes content to the bottom */
+        }
+
+        .testimonial-author img {
+            width: 60px; /* Larger image */
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 15px;
+            border: 2px solid #D4AF37; /* Small golden border */
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.5); /* Subtle glow */
+        }
+
+        .author-details {
+            text-align: left;
+        }
+
+        .author-details strong {
+            display: block;
+            font-size: 1.15rem;
+            color: #D4AF37;
+            margin-bottom: 3px;
+        }
+
+        .author-details span {
+            font-size: 0.9rem;
+            color: #b0b0b0;
+        }
+
+        /* Contact Section */
+        .contact-form {
+            background-color: #1F2833;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+            max-width: 600px;
+            margin: auto;
+            text-align: center; /* Center the form elements */
+        }
+
+        .contact-form label {
+            display: block;
+            text-align: left;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #D4AF37;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: calc(100% - 24px); /* Account for padding */
+            padding: 12px;
+            margin: 10px 0 20px; /* More margin below inputs */
+            border: 1px solid #333; /* Subtle border */
+            border-radius: 6px;
+            font-size: 1rem;
+            background-color: #0B0C10; /* Darker input background */
+            color: #f1f1f1;
+            transition: border-color 0.3s;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: #D4AF37; /* Highlight on focus */
+            outline: none;
+        }
+
+        .contact-form textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .contact-form button {
+            background-color: #D4AF37;
+            color: #000;
+            border: none;
+            padding: 12px 25px; /* Slightly larger button */
+            font-size: 1.1rem; /* Larger text */
+            font-weight: 700;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .contact-form button:hover {
+            background-color: #b38f30;
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #0B0C10;
+            text-align: center;
+            padding: 30px;
+            color: #999;
+            font-size: 0.9rem;
+            border-top: 1px solid #1F2833; /* Subtle top border */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 3rem;
+                padding: 10px 20px;
+            }
+            .hero h2 {
+                font-size: 1.6rem;
+                padding: 10px 15px;
+            }
+            .hero p {
+                font-size: 0.9rem;
+                padding: 10px 15px;
+            }
+            .about-content {
+                flex-direction: column;
+            }
+            .services-cards, .testimonials-grid {
+                grid-template-columns: 1fr; /* Stack on small screens */
+            }
+            .card, .testimonial-card {
+                width: 90%; /* Adjust width for mobile */
+                margin: auto;
+            }
+        }
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .hero h2 {
+                font-size: 1.4rem;
+            }
+            section {
+                padding: 50px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="hero">
+        <h1>Reoo XYZ</h1>
+        <h2>Luxury Digital Solutions That Elevate Your Brand</h2>
+        <p>Crafting premium digital marketing strategies that convert vision into value.</p>
+    </header>
+
+    <section id="about">
+        <h2 class="section-title">About Reoo XYZ</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>We are a high-end digital marketing agency with a flair for excellence and detail. Our services are tailored for elite brands looking to dominate their digital presence through strategy, style, and performance.</p>
+                <p style="margin-top: 15px;">Innovation meets sophistication with Reoo XYZ. We create experiences that captivate, engage, and convert.</p>
+            </div>
+            <div class="about-img">
+                <img src="https://images.unsplash.com/photo-1549490349-f03310065096?auto=format&fit=crop&w=600&q=80" alt="About Reoo XYZ - Luxury Office">
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services-cards">
+            <div class="card">
+                <h3>Brand Identity</h3>
+                <p>Create timeless brand experiences with elegant visuals and clear positioning.</p>
+            </div>
+            <div class="card">
+                <h3>Luxury SEO</h3>
+                <p>Drive elite clients through organic search with refined SEO strategies.</p>
+            </div>
+            <div class="card">
+                <h3>High-End Web Design</h3>
+                <p>Responsive, premium web design that communicates elegance and trust.</p>
+            </div>
+            <div class="card">
+                <h3>Content Strategy</h3>
+                <p>Luxury copywriting and content planning that engages the right audience.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="why-us">
+        <h2 class="section-title">Why Work With Us</h2>
+        <ul class="why">
+            <li>Tailored for premium brands</li>
+            <li>Proven results and elite portfolios</li>
+            <li>Confidential and discreet services</li>
+            <li>High-touch communication and transparency</li>
+        </ul>
+    </section>
+
+    <section id="testimonials">
+        <h2 class="section-title">Client Testimonials</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <blockquote>
+                    “Reoo XYZ truly transformed our digital presence. Their meticulous approach to our brand's unique identity resulted in a remarkable 25% increase in online engagement and a significant uplift in high-value leads within three months. Absolutely superb!”
+                </blockquote>
+                <div class="testimonial-author">
+                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=60&q=80" alt="Profile of Alex Johnson">
+                    <div class="author-details">
+                        <strong>Alex Johnson</strong>
+                        <span>CEO, Elite Properties Group</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <blockquote>
+                    “Professional, elegant, and incredibly effective. Reoo XYZ understood our vision for our latest collection and executed a social media strategy that led to immediate buzz and a 15% increase in pre-orders. We saw tangible results within weeks!”
+                </blockquote>
+                <div class="testimonial-author">
+                    <img src="https://images.unsplash.com/photo-1499557342672-d5b78f8448f7?auto=format&fit=crop&w=60&q=80" alt="Profile of Sophia Chen">
+                    <div class="author-details">
+                        <strong>Sophia Chen</strong>
+                        <span>Creative Director, Aura Fashion House</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <blockquote>
+                    “Working with Reoo XYZ was a seamless experience from start to finish. Their expertise in luxury SEO boosted our organic traffic by 40% in six months, bringing in precisely the high-net-worth clientele we aimed for. Their discretion and communication were impeccable.”
+                </blockquote>
+                <div class="testimonial-author">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=60&q=80" alt="Profile of Marcus Thorne">
+                    <div class="author-details">
+                        <strong>Marcus Thorne</strong>
+                        <span>Founder, Thorne & Co. Jewels</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">Connect With Us</h2>
+        <form class="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        © 2025 Reoo XYZ. All rights reserved.
+    </footer>
+</body>
+</html>
