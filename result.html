@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Reoo XYZ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght%40400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        /* Base styles from homepage */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0B0C10;
+            color: #f1f1f1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; /* Align content to the top */
+            align-items: center;
+            min-height: 100vh; /* Ensure it takes full viewport height */
+            text-align: center;
+            padding: 40px 20px; /* More padding top/bottom for longer page */
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Thank You Page Specific Styles */
+        .thank-you-container {
+            max-width: 900px; /* Slightly wider to accommodate more content */
+            width: 100%;
+            background-color: #1F2833;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+        }
+
+        .thank-you-heading {
+            font-size: 38px; /* Medium size, around 36-42px */
+            color: #D4AF37; /* Brand's primary color */
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .success-icon-wrapper {
+            margin: 30px auto;
+            width: 100px;
+            height: 100px;
+            background-color: #2ECC71; /* Green color for success icon */
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .success-icon {
+            color: #0B0C10; /* Darker color for contrast with green circle */
+            font-size: 50px;
+        }
+
+        .message-section {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            padding: 0 20px;
+            color: #e0e0e0;
+        }
+
+        .client-testimonials-section {
+            margin-top: 40px; /* More space before testimonials */
+            padding-top: 30px;
+            border-top: 1px solid rgba(212, 175, 55, 0.2); /* Subtle separator */
+            text-align: center; /* Center the title */
+        }
+
+        .client-testimonials-section h2 {
+            color: #D4AF37; /* Brand's primary color */
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Responsive grid for testimonials */
+            gap: 30px; /* Space between testimonials */
+            justify-content: center;
+        }
+
+        .testimonial-card-snippet {
+            background-color: #1F2833; /* Same as card background on homepage */
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            border-left: 4px solid #D4AF37; /* Consistent gold border */
+            text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .testimonial-card-snippet:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.4);
+        }
+
+        .testimonial-card-snippet blockquote {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #e0e0e0;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
+        .testimonial-card-snippet .author-details-snippet {
+            font-size: 0.9rem;
+            color: #b0b0b0;
+            font-weight: 600;
+        }
+
+        .testimonial-card-snippet .author-details-snippet strong {
+            display: block; /* Ensures name is on its own line */
+            color: #D4AF37;
+            font-size: 1rem;
+        }
+
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            body {
+                padding: 30px 15px;
+            }
+            .thank-you-heading {
+                font-size: 32px;
+            }
+            .thank-you-container {
+                padding: 30px;
+            }
+            .message-section {
+                font-size: 1rem;
+            }
+            .client-testimonials-section h2 {
+                font-size: 1.8rem;
+            }
+            .testimonials-grid {
+                grid-template-columns: 1fr; /* Stack testimonials on smaller screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 20px 10px;
+            }
+            .thank-you-heading {
+                font-size: 28px;
+            }
+            .thank-you-container {
+                padding: 20px;
+            }
+            .success-icon-wrapper {
+                width: 80px;
+                height: 80px;
+            }
+            .success-icon {
+                font-size: 40px;
+            }
+            .testimonial-card-snippet {
+                padding: 20px;
+            }
+            .testimonial-card-snippet blockquote {
+                font-size: 0.95rem;
+            }
+            .testimonial-card-snippet .author-details-snippet strong {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="thank-you-container">
+        <h1 class="thank-you-heading animate__animated animate__fadeInDown">Thank You!</h1>
+
+        <div class="success-icon-wrapper animate__animated animate__bounceIn">
+            <span class="success-icon">&#10003;</span> </div>
+
+        <p class="message-section">
+            Thank you for reaching out! We’ve received your message and one of our team members will get in touch with you shortly. We appreciate your interest in working with our agency.
+        </p>
+
+        <div class="client-testimonials-section">
+            <h2 class="animate__animated animate__fadeInUp">What Our Clients Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card-snippet">
+                    <blockquote>
+                        “Reoo XYZ truly transformed our digital presence. Their meticulous approach to our brand's unique identity resulted in a remarkable 25% increase in online engagement and a significant uplift in high-value leads within three months. Absolutely superb!”
+                    </blockquote>
+                    <div class="author-details-snippet">
+                        <strong>Alex Johnson</strong>
+                        <span>CEO, Elite Properties Group</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card-snippet">
+                    <blockquote>
+                        “Professional, elegant, and incredibly effective. Reoo XYZ understood our vision for our latest collection and executed a social media strategy that led to immediate buzz and a 15% increase in pre-orders. We saw tangible results within weeks!”
+                    </blockquote>
+                    <div class="author-details-snippet">
+                        <strong>Sophia Chen</strong>
+                        <span>Creative Director, Aura Fashion House</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card-snippet">
+                    <blockquote>
+                        “Working with Reoo XYZ was a seamless experience from start to finish. Their expertise in luxury SEO boosted our organic traffic by 40% in six months, bringing in precisely the high-net-worth clientele we aimed for. Their discretion and communication were impeccable.”
+                    </blockquote>
+                    <div class="author-details-snippet">
+                        <strong>Marcus Thorne</strong>
+                        <span>Founder, Thorne & Co. Jewels</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card-snippet">
+                    <blockquote>
+                        “Reoo XYZ delivered exceptional results for our high-end automotive brand. Their digital campaigns were sophisticated and reached our target demographic perfectly, leading to a noticeable increase in showroom visits and sales inquiries.”
+                    </blockquote>
+                    <div class="author-details-snippet">
+                        <strong>David Lee</strong>
+                        <span>Marketing Director, Prestige Auto Group</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card-snippet">
+                    <blockquote>
+                        “Our luxury hospitality group saw an impressive 30% rise in direct bookings after partnering with Reoo XYZ. Their team’s understanding of our unique market and ability to craft compelling narratives is unparalleled.”
+                    </blockquote>
+                    <div class="author-details-snippet">
+                        <strong>Emily White</strong>
+                        <span>VP of Sales, Grandeur Resorts</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card-snippet">
+                    <blockquote>
+                        “From website redesign to content creation, Reoo XYZ handled everything with utmost professionalism and a keen eye for luxury. Our online presence has never been stronger, reflecting the true essence of our bespoke services.”
+                    </blockquote>
+                    <div class="author-details-snippet">
+                        <strong>Michael Brown</strong>
+                        <span>Owner, Bespoke Tailors</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card-snippet">
+                    <blockquote>
+                        “The team at Reoo XYZ exceeded our expectations. Their strategic approach to our brand refresh and digital advertising campaigns resulted in a significant boost in brand recognition among our target affluent audience.”
+                    </blockquote>
+                    <div class="author-details-snippet">
+                        <strong>Olivia Taylor</strong>
+                        <span>Brand Manager, Heritage Watches</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card-snippet">
+                    <blockquote>
+                        “We were looking for an agency that understood the nuances of marketing high-value assets. Reoo XYZ delivered with precision, enhancing our online visibility and generating qualified leads at an impressive rate.”
+                    </blockquote>
+                    <div class="author-details-snippet">
+                        <strong>Daniel Green</strong>
+                        <span>Director, Fine Art Acquisitions</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card-snippet">
+                    <blockquote>
+                        “Their creative content strategy for our luxury travel experiences was brilliant. We saw a remarkable increase in engagement on our social platforms and our bookings for exclusive tours have soared.”
+                    </blockquote>
+                    <div class="author-details-snippet">
+                        <strong>Chloe Adams</strong>
+                        <span>Head of Marketing, Voyage Prive</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
